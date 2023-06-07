@@ -1,12 +1,13 @@
 ### COMMAND DOCKER
+### Learn docker by Panji
 
 docker images
 // melihat daftar images pada docker client
 
-docker container ls
+docker container ls [atau] docker container ps
 // daftar container running
 
-docker container ls --all
+docker container ls --all 
 // SEMUA daftar container running
 
 docker container create --name [nama]
@@ -14,3 +15,15 @@ docker container create --name [nama]
 
 docker container start [nama]
 // menjalankan docker container
+
+docker container rm [nama]
+// hapus container docker
+
+docker container create --name mysqlds1 -p 3307:3306 mysql:latest
+// membuat container dgn akses port dari luar 3307
+
+docker exec -it [nama container] bash
+// masuk ke CLI shell container
+
+docker rmi [nama images]
+// hapus images docker
