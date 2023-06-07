@@ -1,1 +1,10 @@
-tezt
+### COMMAND DOCKER
+
+docker images
+// melihat daftar images pada docker client
+
+docker container ls
+// daftar container running
+
+docker container ls --all
+// SEMUA daftar container running
