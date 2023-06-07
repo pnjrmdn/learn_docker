@@ -9,5 +9,8 @@ docker container ls
 docker container ls --all
 // SEMUA daftar container running
 
-docker container create  --name mysqldocker 
+docker container create --name [nama]
 // membuat container dengan nama
+
+docker container start [nama]
+// menjalankan docker container
