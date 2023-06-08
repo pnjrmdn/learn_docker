@@ -7,7 +7,7 @@ docker images
 docker container ls [atau] docker container ps
 // daftar container running
 
-docker container ls --all 
+docker container ls --all [atau] docker container ps -a
 // SEMUA daftar container running
 
 docker container create --name [nama]
