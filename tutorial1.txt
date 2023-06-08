@@ -19,7 +19,7 @@ docker container start [nama]
 docker container rm [nama]
 // hapus container docker
 
-docker container create --name mysqlds1 -p 3307:3306 mysql:latest
+docker container create --name mysqlds1 -p 3307:3306 mysql:8.0.1
 // membuat container dgn akses port dari luar 3307
 
 docker exec -it [nama container] bash
