@@ -8,7 +8,7 @@ docker container ls [atau] docker container ps
 // daftar container running
 
 docker container ls --all [atau] docker container ps -a
-// SEMUA daftar container running
+// semua daftar container running
 
 docker container create --name [nama]
 // membuat container dengan nama
@@ -19,19 +19,33 @@ docker container start [nama]
 docker container rm [nama]
 // hapus container docker
 
+Cheat Set Docker CLI
+++++++++++++++++++++
+
+@by pnjrmdn
+
+-- CREATE
 docker container create --name my-mysql-container -e MYSQL_ROOT_PASSWORD=your_password -p 3306:3306 mysql:latest
 // membuat container dgn akses port dari luar 3307
 
+
+-- ACCESS
 docker exec -it [nama container] bash
 // masuk ke CLI shell container
 
+
+ -- DELETE
 docker rmi [nama images]
 // hapus images docker
 
+
+-- VIEW
+docker ps -a
+// melihat semua container yg ada
+
+docker images -a
+// melihat images yang diunduh
+
+- error
 docker run -t -d --name mysqlds1 mysql
 // cek output error container docker
-
-docker run -d --name sermysql -e MYSQL_ROOT_PASSWORD=panji55 -p 3307:3307 mysql
-// create container mysql
-
-docker run -d -p 3307:3306 --name mysql_container -e MYSQL_ROOT_PASSWORD=password mysql:latest
