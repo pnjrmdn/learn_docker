@@ -19,7 +19,7 @@ docker container start [nama]
 docker container rm [nama]
 // hapus container docker
 
-docker container create --name mysqlds1 -p 3307:3306 mysql
+docker container create --name my-mysql-container -e MYSQL_ROOT_PASSWORD=your_password -p 3306:3306 mysql:latest
 // membuat container dgn akses port dari luar 3307
 
 docker exec -it [nama container] bash
@@ -33,3 +33,5 @@ docker run -t -d --name mysqlds1 mysql
 
 docker run -d --name sermysql -e MYSQL_ROOT_PASSWORD=panji55 -p 3307:3307 mysql
 // create container mysql
+
+docker run -d -p 3307:3306 --name mysql_container -e MYSQL_ROOT_PASSWORD=password mysql:latest
