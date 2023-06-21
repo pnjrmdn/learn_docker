@@ -49,3 +49,5 @@ docker images -a
 - error
 docker run -t -d --name mysqlds1 mysql
 // cek output error container docker
+
+// last
